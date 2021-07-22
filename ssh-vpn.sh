@@ -1,5 +1,5 @@
 #!/bin/bash
-# By RPJ WONOSOBO
+# By MyTeam
 # ==================================================
 
 # initializing var
@@ -12,15 +12,15 @@ ver=$VERSION_ID
 
 #detail nama perusahaan
 country=ID
-state=Indonesia
-locality=Indonesia
-organization=www.lestakun.tech
-organizationalunit=www.lestakun.tech
-commonname=www.lestakun.tech
-email=lesta@lestakun.tech
+state=Malaysia
+locality=Malaysia
+organization=www.cvpn.ovh
+organizationalunit=www.cvpn.ovh
+commonname=www.cvpn.ovh
+email=myteam@cvpn.ovh
 
 # simple password minimal
-wget -O /etc/pam.d/common-password "https://raw.githubusercontent.com/lesta-1/sc/main/password"
+wget -O /etc/pam.d/common-password "https://raw.githubusercontent.com/LolLloLlLolLlLolL-rgb/nyamuk/beta/password"
 chmod +x /etc/pam.d/common-password
 
 # go to root
@@ -43,7 +43,7 @@ WantedBy=multi-user.target
 END
 
 # Getting Proxy Template
-wget -q -O /usr/local/bin/edu-proxy https://raw.githubusercontent.com/lesta-1/sc/main/proxy-templated.py
+wget -q -O /usr/local/bin/edu-proxy https://raw.githubusercontent.com/LolLloLlLolLlLolL-rgb/nyamuk/beta/proxy-templated.py
 chmod +x /usr/local/bin/edu-proxy
 
 # Installing Service
@@ -131,12 +131,12 @@ rm /etc/nginx/sites-enabled/default
 rm /etc/nginx/sites-available/default
 wget -O /etc/nginx/nginx.conf "https://raw.githubusercontent.com/lesta-1/sc/main/nginx.conf"
 mkdir -p /home/vps/public_html
-wget -O /etc/nginx/conf.d/vps.conf "https://raw.githubusercontent.com/lesta-1/sc/main/vps.conf"
+wget -O /etc/nginx/conf.d/vps.conf "https://raw.githubusercontent.com/LolLloLlLolLlLolL-rgb/nyamuk/beta/vps.conf"
 /etc/init.d/nginx restart
 
 # install badvpn
 cd
-wget -O /usr/bin/badvpn-udpgw "https://raw.githubusercontent.com/lesta-1/sc/main/badvpn-udpgw64"
+wget -O /usr/bin/badvpn-udpgw "https://raw.githubusercontent.com/LolLloLlLolLlLolL-rgb/nyamuk/beta/badvpn-udpgw64"
 chmod +x /usr/bin/badvpn-udpgw
 sed -i '$ i\screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7100 --max-clients 500' /etc/rc.local
 sed -i '$ i\screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7200 --max-clients 500' /etc/rc.local
@@ -167,7 +167,7 @@ echo "/usr/sbin/nologin" >> /etc/shells
 # install squid
 cd
 apt -y install squid3
-wget -O /etc/squid/squid.conf "https://raw.githubusercontent.com/lesta-1/sc/main/squid3.conf"
+wget -O /etc/squid/squid.conf "https://raw.githubusercontent.com/LolLloLlLolLlLolL-rgb/nyamuk/beta/squid3.conf"
 sed -i $MYIP2 /etc/squid/squid.conf
 
 # setting vnstat
@@ -197,7 +197,7 @@ socket = l:TCP_NODELAY=1
 socket = r:TCP_NODELAY=1
 
 [dropbear]
-accept = 443
+accept = 444
 connect = 127.0.0.1:109
 
 [dropbear]
@@ -221,7 +221,7 @@ sed -i 's/ENABLED=0/ENABLED=1/g' /etc/default/stunnel4
 /etc/init.d/stunnel4 restart
 
 #OpenVPN
-wget https://raw.githubusercontent.com/lesta-1/sc/main/vpn.sh &&  chmod +x vpn.sh && ./vpn.sh
+wget https://raw.githubusercontent.com/LolLloLlLolLlLolL-rgb/nyamuk/beta/vpn.sh &&  chmod +x vpn.sh && ./vpn.sh
 
 # install fail2ban
 apt -y install fail2ban
@@ -276,39 +276,39 @@ netfilter-persistent reload
 
 # download script
 cd /usr/bin
-wget -O add-host "https://raw.githubusercontent.com/lesta-1/sc/main/add-host.sh"
-wget -O about "https://raw.githubusercontent.com/lesta-1/sc/main/about.sh"
-wget -O menu "https://raw.githubusercontent.com/lesta-1/sc/main/menu.sh"
-wget -O usernew "https://raw.githubusercontent.com/lesta-1/sc/main/usernew.sh"
-wget -O trial "https://raw.githubusercontent.com/lesta-1/sc/main/trial.sh"
-wget -O hapus "https://raw.githubusercontent.com/lesta-1/sc/main/hapus.sh"
-wget -O member "https://raw.githubusercontent.com/lesta-1/sc/main/member.sh"
-wget -O delete "https://raw.githubusercontent.com/lesta-1/sc/main/delete.sh"
-wget -O cek "https://raw.githubusercontent.com/lesta-1/sc/main/cek.sh"
-wget -O restart "https://raw.githubusercontent.com/lesta-1/sc/main/restart.sh"
-wget -O speedtest "https://raw.githubusercontent.com/lesta-1/sc/main/speedtest_cli.py"
-wget -O info "https://raw.githubusercontent.com/lesta-1/sc/main/info.sh"
-wget -O ram "https://raw.githubusercontent.com/lesta-1/sc/main/ram.sh"
-wget -O renew "https://raw.githubusercontent.com/lesta-1/sc/main/renew.sh"
-wget -O autokill "https://raw.githubusercontent.com/lesta-1/sc/main/autokill.sh"
-wget -O ceklim "https://raw.githubusercontent.com/lesta-1/sc/main/ceklim.sh"
-wget -O tendang "https://raw.githubusercontent.com/lesta-1/sc/main/tendang.sh"
-wget -O clear-log "https://raw.githubusercontent.com/lesta-1/sc/main/clear-log.sh"
-wget -O change-port "https://raw.githubusercontent.com/lesta-1/sc/main/change.sh"
-wget -O port-ovpn "https://raw.githubusercontent.com/lesta-1/sc/main/port-ovpn.sh"
-wget -O port-ssl "https://raw.githubusercontent.com/lesta-1/sc/main/port-ssl.sh"
-wget -O port-wg "https://raw.githubusercontent.com/lesta-1/sc/main/port-wg.sh"
-wget -O port-tr "https://raw.githubusercontent.com/lesta-1/sc/main/port-tr.sh"
-wget -O port-sstp "https://raw.githubusercontent.com/lesta-1/sc/main/port-sstp.sh"
-wget -O port-squid "https://raw.githubusercontent.com/lesta-1/sc/main/port-squid.sh"
-wget -O port-ws "https://raw.githubusercontent.com/lesta-1/sc/main/port-ws.sh"
-wget -O port-vless "https://raw.githubusercontent.com/lesta-1/sc/main/port-vless.sh"
-wget -O wbmn "https://raw.githubusercontent.com/lesta-1/sc/main/webmin.sh"
-wget -O xp "https://raw.githubusercontent.com/lesta-1/sc/main/xp.sh"
-wget -O update "https://raw.githubusercontent.com/lesta-1/sc/main/update.sh"
-wget -O add-cfh "https://raw.githubusercontent.com/lesta-1/sc/main/add-cfh.sh"
-wget -O add-cfd "https://raw.githubusercontent.com/lesta-1/sc/main/add-cfd.sh"
-wget -O add-cff "https://raw.githubusercontent.com/lesta-1/sc/main/add-cff.sh"
+wget -O add-host "https://raw.githubusercontent.com/LolLloLlLolLlLolL-rgb/nyamuk/beta/add-host.sh"
+wget -O about "https://raw.githubusercontent.com/LolLloLlLolLlLolL-rgb/nyamuk/beta/about.sh"
+wget -O menu "https://raw.githubusercontent.com/LolLloLlLolLlLolL-rgb/nyamuk/beta/menu.sh"
+wget -O usernew "https://raw.githubusercontent.com/LolLloLlLolLlLolL-rgb/nyamuk/beta/usernew.sh"
+wget -O trial "https://raw.githubusercontent.com/LolLloLlLolLlLolL-rgb/nyamuk/beta/trial.sh"
+wget -O hapus "https://raw.githubusercontent.com/LolLloLlLolLlLolL-rgb/nyamuk/beta/hapus.sh"
+wget -O member "https://raw.githubusercontent.com/LolLloLlLolLlLolL-rgb/nyamuk/beta/member.sh"
+wget -O delete "https://raw.githubusercontent.com/LolLloLlLolLlLolL-rgb/nyamuk/beta/delete.sh"
+wget -O cek "https://raw.githubusercontent.com/LolLloLlLolLlLolL-rgb/nyamuk/beta/cek.sh"
+wget -O restart "https://raw.githubusercontent.com/LolLloLlLolLlLolL-rgb/nyamuk/beta/restart.sh"
+wget -O speedtest "https://raw.githubusercontent.com/LolLloLlLolLlLolL-rgb/nyamuk/beta/speedtest_cli.py"
+wget -O info "https://raw.githubusercontent.com/LolLloLlLolLlLolL-rgb/nyamuk/beta/info.sh"
+wget -O ram "https://raw.githubusercontent.com/LolLloLlLolLlLolL-rgb/nyamuk/beta/ram.sh"
+wget -O renew "https://raw.githubusercontent.com/LolLloLlLolLlLolL-rgb/nyamuk/beta/renew.sh"
+wget -O autokill "https://raw.githubusercontent.com/LolLloLlLolLlLolL-rgb/nyamuk/beta/autokill.sh"
+wget -O ceklim "https://raw.githubusercontent.com/LolLloLlLolLlLolL-rgb/nyamuk/beta/ceklim.sh"
+wget -O tendang "https://raw.githubusercontent.com/LolLloLlLolLlLolL-rgb/nyamuk/beta/tendang.sh"
+wget -O clear-log "https://raw.githubusercontent.com/LolLloLlLolLlLolL-rgb/nyamuk/beta/clear-log.sh"
+wget -O change-port "https://raw.githubusercontent.com/LolLloLlLolLlLolL-rgb/nyamuk/beta/change.sh"
+wget -O port-ovpn "https://raw.githubusercontent.com/LolLloLlLolLlLolL-rgb/nyamuk/beta/port-ovpn.sh"
+wget -O port-ssl "https://raw.githubusercontent.com/LolLloLlLolLlLolL-rgb/nyamuk/beta/port-ssl.sh"
+wget -O port-wg "https://raw.githubusercontent.com/LolLloLlLolLlLolL-rgb/nyamuk/beta/port-wg.sh"
+wget -O port-tr "https://raw.githubusercontent.com/LolLloLlLolLlLolL-rgb/nyamuk/beta/port-tr.sh"
+wget -O port-sstp "https://raw.githubusercontent.com/LolLloLlLolLlLolL-rgb/nyamuk/beta/port-sstp.sh"
+wget -O port-squid "https://raw.githubusercontent.com/LolLloLlLolLlLolL-rgb/nyamuk/beta/port-squid.sh"
+wget -O port-ws "https://raw.githubusercontent.com/LolLloLlLolLlLolL-rgb/nyamuk/beta/port-ws.sh"
+wget -O port-vless "https://raw.githubusercontent.com/LolLloLlLolLlLolL-rgb/nyamuk/beta/port-vless.sh"
+wget -O wbmn "https://raw.githubusercontent.com/LolLloLlLolLlLolL-rgb/nyamuk/beta/webmin.sh"
+wget -O xp "https://raw.githubusercontent.com/LolLloLlLolLlLolL-rgb/nyamuk/beta/xp.sh"
+wget -O update "https://raw.githubusercontent.com/LolLloLlLolLlLolL-rgb/nyamuk/beta/update.sh"
+wget -O add-cfh "https://raw.githubusercontent.com/LolLloLlLolLlLolL-rgb/nyamuk/beta/add-cfh.sh"
+wget -O add-cfd "https://raw.githubusercontent.com/LolLloLlLolLlLolL-rgb/nyamuk/beta/add-cfd.sh"
+wget -O add-cff "https://raw.githubusercontent.com/LolLloLlLolLlLolL-rgb/nyamuk/beta/add-cff.sh"
 chmod +x add-cfh
 chmod +x add-cfd
 chmod +x add-cff

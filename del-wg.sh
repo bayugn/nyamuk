@@ -27,7 +27,7 @@ source /etc/wireguard/params
 	echo ""
 	echo " Select the existing client you want to remove"
 	echo " Press CTRL+C to return"
-	echo " ==============================="
+	echo " ×××××××××××××××××××××××××××××××"
 	echo "     No  Expired   User"
 	grep -E "^### Client" "/etc/wireguard/$SERVER_WG_NIC.conf" | cut -d ' ' -f 3-4 | nl -s ') '
 	until [[ ${CLIENT_NUMBER} -ge 1 && ${CLIENT_NUMBER} -le ${NUMBER_OF_CLIENTS} ]]; do
@@ -53,7 +53,7 @@ source /etc/wireguard/params
 	service cron restart
 clear
 echo " Wireguard Account Deleted Successfully"
-echo " =========================="
+echo " ××××××××××××××××××××××××××"
 echo " Client Name : $user"
 echo " Expired  On : $exp"
-echo " =========================="
+echo " ××××××××××××××××××××××××××"

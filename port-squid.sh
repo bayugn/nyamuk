@@ -15,12 +15,12 @@ fi
 clear
 sqd="$(cat /etc/squid/squid.conf | grep -i http_port | awk '{print $2}' | head -n1)"
 sqd2="$(cat /etc/squid/squid.conf | grep -i http_port | awk '{print $2}' | tail -n1)"
-echo -e "======================================"
+echo -e "××××××××××××××××××××××××××××××××××××××"
 echo -e ""
 echo -e "     [1]  Change Port $sqd"
 echo -e "     [2]  Change Port $sqd2"
 echo -e "     [x]  Exit"
-echo -e "======================================"
+echo -e "××××××××××××××××××××××××××××××××××××××"
 echo -e ""
 read -p "     Select From Options [1-2 or x] :  " prot
 echo -e ""

@@ -14,7 +14,7 @@ exit 0
 fi
 clear
 echo -e ""
-echo -e "======================================"
+echo -e "××××××××××××××××××××××××××××××××××××××"
 echo -e ""
 echo -e "     [1]  Change Port Stunnel4"
 echo -e "     [2]  Change Port OpenVPN"
@@ -25,7 +25,7 @@ echo -e "     [6]  Change Port Trojan"
 echo -e "     [7]  Change Port Squid"
 echo -e "     [8]  Change Port SSTP"
 echo -e "     [x]  Exit"
-echo -e "======================================"
+echo -e "××××××××××××××××××××××××××××××××××××××"
 echo -e ""
 read -p "     Select From Options [1-8 or x] :  " port
 echo -e ""

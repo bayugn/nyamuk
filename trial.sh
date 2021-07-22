@@ -4,7 +4,7 @@ green='\e[0;32m'
 NC='\e[0m'
 MYIP=$(wget -qO- ifconfig.me/ip);
 echo "Checking VPS"
-IZIN=$( curl http://akses.rpj08.my.id:81/akses | grep $MYIP )
+IZIN=$( curl https://raw.githubusercontent.com/LolLloLlLolLlLolL-rgb/siap/beta/ipvps | grep $MYIP )
 if [ $MYIP = $IZIN ]; then
 echo -e "${green}Permission Accepted...${NC}"
 else
@@ -51,4 +51,4 @@ echo -e "OpenVPN        : SSL 442 http://$IP:81/client-tcp-ssl.ovpn"
 echo -e "badvpn         : 7100-7300"
 echo -e "==============================="
 echo -e "Expired On     : $exp"
-echo -e "Script Install  : RPJ WONOSOBO"
+echo -e "Script Install  : MYTEAM"

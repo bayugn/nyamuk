@@ -15,12 +15,12 @@ fi
 clear
 tls="$(cat ~/log-install.txt | grep -w "Vmess TLS" | cut -d: -f2|sed 's/ //g')"
 none="$(cat ~/log-install.txt | grep -w "Vmess None TLS" | cut -d: -f2|sed 's/ //g')"
-echo -e "======================================"
+echo -e "××××××××××××××××××××××××××××××××××××××"
 echo -e ""
 echo -e "     [1]  Change Port Vmess TLS $tls"
 echo -e "     [2]  Change Port Vmess None TLS $none"
 echo -e "     [x]  Exit"
-echo -e "======================================"
+echo -e "××××××××××××××××××××××××××××××××××××××"
 echo -e ""
 read -p "     Select From Options [1-2 or x] :  " prot
 echo -e ""

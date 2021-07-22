@@ -10,8 +10,8 @@ echo -e "key=$key" >> /root/mail.conf
 clear
 echo "Done"
 echo "Your ID Cloudflare"
-echo -e "==============================="
+echo -e "×××××××××××××××××××××××××××××××××"
 echo "DOMAIN         : $domain"
 echo "Email          : $email"
 echo "Api Key        : $key"
-echo -e "==============================="
+echo -e "×××××××××××××××××××××××××××××××××"

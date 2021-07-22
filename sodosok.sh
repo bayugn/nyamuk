@@ -22,12 +22,12 @@ apt install simple-obfs -y
 elif [[ $OS == 'debian' ]]; then
 if [[ "$ver" = "9" ]]; then
 apt update
-apt -t stretch-backports install shadowsocks-libev -y
-apt -t stretch-backports install simple-obfs -y
+apt install shadowsocks-libev -y
+apt install simple-obfs -y
 elif [[ "$ver" = "10" ]]; then
 apt update
-apt -t buster-backports install shadowsocks-libev -y
-apt -t buster-backports install simple-obfs -y
+apt shadowsocks-libev -y
+apt install simple-obfs -y
 fi
 fi
 echo "Install Shadowsocks-libev Selesai."

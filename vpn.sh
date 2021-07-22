@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-# By Rpj Wonosobo
+# By MYTEAM
 # ==================================================
 
 # initialisasi var

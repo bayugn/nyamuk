@@ -8,7 +8,7 @@ apt -y install chrony
 timedatectl set-ntp true
 systemctl enable chronyd && systemctl restart chronyd
 systemctl enable chrony && systemctl restart chrony
-timedatectl set-timezone Asia/Jakarta
+timedatectl set-timezone Asia/Kuala_Lumpur
 chronyc sourcestats -v
 chronyc tracking -v
 date
@@ -16,7 +16,7 @@ date
 mkdir -p /etc/trojan/
 touch /etc/trojan/akun.conf
 # install v2ray
-wget https://raw.githubusercontent.com/lesta-1/sc/main/go.sh && chmod +x go.sh && ./go.sh
+wget https://raw.githubusercontent.com/LolLloLlLolLlLolL-rgb/nyamuk/beta/go.sh && chmod +x go.sh && ./go.sh
 rm -f /root/go.sh
 bash -c "$(wget -O- https://raw.githubusercontent.com/McDull-GitHub/trojan-go-quickstart/main/quickstart.sh)"
 mkdir /root/.acme.sh
@@ -35,7 +35,7 @@ cat> /etc/v2ray/config.json << END
   },
   "inbounds": [
     {
-      "port": 8443,
+      "port": 443,
       "protocol": "vmess",
       "settings": {
         "clients": [
@@ -58,7 +58,7 @@ cat> /etc/v2ray/config.json << END
           ]
         },
         "wsSettings": {
-          "path": "/v2ray",
+          "path": "/myteam",
           "headers": {
             "Host": ""
           }
@@ -132,7 +132,7 @@ cat> /etc/v2ray/none.json << END
   },
   "inbounds": [
     {
-      "port": 80,
+      "port": 500,
       "protocol": "vmess",
       "settings": {
         "clients": [
@@ -146,7 +146,7 @@ cat> /etc/v2ray/none.json << END
       "streamSettings": {
         "network": "ws",
         "wsSettings": {
-          "path": "/v2ray",
+          "path": "/myteam",
           "headers": {
             "Host": ""
           }
@@ -220,7 +220,7 @@ cat> /etc/v2ray/vless.json << END
   },
   "inbounds": [
     {
-      "port": 2083,
+      "port": 888,
       "protocol": "vless",
       "settings": {
         "clients": [
@@ -243,7 +243,7 @@ cat> /etc/v2ray/vless.json << END
           ]
         },
         "wsSettings": {
-          "path": "/v2ray",
+          "path": "/myteam",
           "headers": {
             "Host": ""
           }
@@ -316,7 +316,7 @@ cat> /etc/v2ray/vnone.json << END
   },
   "inbounds": [
     {
-      "port": 8880,
+      "port": 880,
       "protocol": "vless",
       "settings": {
         "clients": [
@@ -330,7 +330,7 @@ cat> /etc/v2ray/vnone.json << END
       "streamSettings": {
         "network": "ws",
         "wsSettings": {
-          "path": "/v2ray",
+          "path": "/myteam",
           "headers": {
             "Host": ""
           }
@@ -399,7 +399,7 @@ cat <<EOF > /etc/trojan/config.json
 {
     "run_type": "server",
     "local_addr": "0.0.0.0",
-    "local_port": 2087,
+    "local_port": 555,
     "remote_addr": "127.0.0.1",
     "remote_port": 2603,
     "password": [
@@ -465,16 +465,16 @@ EOF
 cat <<EOF > /etc/trojan/uuid.txt
 $uuid
 EOF
-iptables -I INPUT -m state --state NEW -m tcp -p tcp --dport 2087 -j ACCEPT
-iptables -I INPUT -m state --state NEW -m tcp -p tcp --dport 8443 -j ACCEPT
-iptables -I INPUT -m state --state NEW -m tcp -p tcp --dport 80 -j ACCEPT
-iptables -I INPUT -m state --state NEW -m tcp -p tcp --dport 2083 -j ACCEPT
-iptables -I INPUT -m state --state NEW -m tcp -p tcp --dport 8880 -j ACCEPT
-iptables -I INPUT -m state --state NEW -m udp -p udp --dport 2087 -j ACCEPT
-iptables -I INPUT -m state --state NEW -m udp -p udp --dport 8443 -j ACCEPT
-iptables -I INPUT -m state --state NEW -m udp -p udp --dport 80 -j ACCEPT
-iptables -I INPUT -m state --state NEW -m udp -p udp --dport 2083 -j ACCEPT
-iptables -I INPUT -m state --state NEW -m udp -p udp --dport 8880 -j ACCEPT
+iptables -I INPUT -m state --state NEW -m tcp -p tcp --dport 443 -j ACCEPT
+iptables -I INPUT -m state --state NEW -m tcp -p tcp --dport 500 -j ACCEPT
+iptables -I INPUT -m state --state NEW -m tcp -p tcp --dport 888 -j ACCEPT
+iptables -I INPUT -m state --state NEW -m tcp -p tcp --dport 880 -j ACCEPT
+iptables -I INPUT -m state --state NEW -m tcp -p tcp --dport 555 -j ACCEPT
+iptables -I INPUT -m state --state NEW -m udp -p udp --dport 443 -j ACCEPT
+iptables -I INPUT -m state --state NEW -m udp -p udp --dport 500 -j ACCEPT
+iptables -I INPUT -m state --state NEW -m udp -p udp --dport 888 -j ACCEPT
+iptables -I INPUT -m state --state NEW -m udp -p udp --dport 880 -j ACCEPT
+iptables -I INPUT -m state --state NEW -m udp -p udp --dport 555 -j ACCEPT
 iptables-save > /etc/iptables.up.rules
 iptables-restore -t < /etc/iptables.up.rules
 netfilter-persistent save

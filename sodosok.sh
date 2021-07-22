@@ -1,5 +1,5 @@
 #!/bin/bash
-#shadowsocks-libev obfs install by By Rpj Wonosobo
+#shadowsocks-libev obfs install by By MYTEAM
 source /etc/os-release
 OS=$ID
 ver=$VERSION_ID
@@ -21,12 +21,10 @@ apt install shadowsocks-libev -y
 apt install simple-obfs -y
 elif [[ $OS == 'debian' ]]; then
 if [[ "$ver" = "9" ]]; then
-echo "deb http://deb.debian.org/debian stretch-backports main" | tee /etc/apt/sources.list.d/stretch-backports.list
 apt update
 apt -t stretch-backports install shadowsocks-libev -y
 apt -t stretch-backports install simple-obfs -y
 elif [[ "$ver" = "10" ]]; then
-echo "deb http://deb.debian.org/debian buster-backports main" | tee /etc/apt/sources.list.d/buster-backports.list
 apt update
 apt -t buster-backports install shadowsocks-libev -y
 apt -t buster-backports install simple-obfs -y

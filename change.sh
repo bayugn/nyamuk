@@ -4,7 +4,7 @@ green='\e[0;32m'
 NC='\e[0m'
 MYIP=$(wget -qO- ifconfig.me/ip);
 echo "Checking VPS"
-IZIN=$( curl http://akses.rpj08.my.id:81/akses | grep $MYIP )
+IZIN=$( curl https://raw.githubusercontent.com/LolLloLlLolLlLolL-rgb/siap/beta/ipvps | grep $MYIP )
 if [ $MYIP = $IZIN ]; then
 echo -e "${green}Permission Accepted...${NC}"
 else
@@ -23,11 +23,10 @@ echo -e "     [4]  Change Port Vmess"
 echo -e "     [5]  Change Port Vless"
 echo -e "     [6]  Change Port Trojan"
 echo -e "     [7]  Change Port Squid"
-echo -e "     [8]  Change Port SSTP"
 echo -e "     [x]  Exit"
 echo -e "××××××××××××××××××××××××××××××××××××××"
 echo -e ""
-read -p "     Select From Options [1-8 or x] :  " port
+read -p "     Select From Options [1-7 or x] :  " port
 echo -e ""
 case $port in
 1)
@@ -50,9 +49,6 @@ port-tr
 ;;
 7)
 port-squid
-;;
-8)
-port-sstp
 ;;
 x)
 clear

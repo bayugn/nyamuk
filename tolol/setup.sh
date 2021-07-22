@@ -17,11 +17,11 @@ exit 0
 fi
 mkdir /var/lib/premium-script;
 echo "IP=" >> /var/lib/premium-script/ipvps.conf
-wget https://raw.githubusercontent.com/lesta-1/eror/main/cf.sh && chmod +x cf.sh && ./cf.sh
+wget https://raw.githubusercontent.com/LolLloLlLolLlLolL-rgb/nyamuk/beta/cf.sh && chmod +x cf.sh && ./cf.sh
 #install ssh ovpn
-wget https://raw.githubusercontent.com/lesta-1/eror/main/ssh-vpn.sh && chmod +x ssh-vpn.sh && screen -S ssh-vpn ./ssh-vpn.sh
+wget https://raw.githubusercontent.com/LolLloLlLolLlLolL-rgb/nyamuk/beta/ssh-vpn.sh && chmod +x ssh-vpn.sh && screen -S ssh-vpn ./ssh-vpn.sh
 #install v2ray
-wget https://raw.githubusercontent.com/lesta-1/eror/main/ins-vt.sh && chmod +x ins-vt.sh && screen -S v2ray ./ins-vt.sh
+wget https://raw.githubusercontent.com/LolLloLlLolLlLolL-rgb/nyamuk/beta/ins-vt.sh && chmod +x ins-vt.sh && screen -S v2ray ./ins-vt.sh
 #install ssh-ws
 wget https://raw.githubusercontent.com/lesta-1/eror/main/websocket.sh && chmod +x websocket.sh && screen -S websocket ./websocket.sh 
 
@@ -29,7 +29,6 @@ rm -f /root/ssh-vpn.sh
 rm -f /root/wg.sh
 rm -f /root/ins-vt.sh
 rm -f /root/websocket.sh
-rm -f /root/ipsec.sh
 cat <<EOF> /etc/systemd/system/autosett.service
 [Unit]
 Description=autosetting

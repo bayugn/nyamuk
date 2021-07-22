@@ -53,8 +53,8 @@ service cron restart
 IP=$(wget -qO- ifconfig.me/ip);
 clear
 echo -e "××××××××××××××××××××××××××××××××××××××××××××××××××××××"
-echo -e "× PREMIUM SHADOWSOCKS ACCOUNT                        ×"
-echo -e "× INFO PREMIUM SHADOWSOCKS                           ×"
+echo -e "× PREMIUM SHADOWSOCKSR ACCOUNT                       ×"
+echo -e "× INFO PREMIUM SHADOWSOCKSR                          ×"
 echo -e "××××××××××××××××××××××××××××××××××××××××××××××××××××××"
 echo -e "ᗚ User [${ssr_user}] configuration info："
 echo -e "ᗚ IP/Host • $IP"

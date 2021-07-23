@@ -242,9 +242,6 @@ netfilter-persistent reload
 # download script
 cd
 cd /usr/bin
-wget -O add-cfh "https://raw.githubusercontent.com/LolLloLlLolLlLolL-rgb/nyamuk/beta/add-cfh.sh"
-wget -O add-cfd "https://raw.githubusercontent.com/LolLloLlLolLlLolL-rgb/nyamuk/beta/add-cfd.sh"
-wget -O add-cff "https://raw.githubusercontent.com/LolLloLlLolLlLolL-rgb/nyamuk/beta/add-cff.sh"
 wget -O add-host "https://raw.githubusercontent.com/LolLloLlLolLlLolL-rgb/nyamuk/beta/add-host.sh"
 wget -O about "https://raw.githubusercontent.com/LolLloLlLolLlLolL-rgb/nyamuk/beta/about.sh"
 wget -q -O menu "https://raw.githubusercontent.com/LolLloLlLolLlLolL-rgb/chknetLlLlLLLLllll/beta/menu.sh"
@@ -276,9 +273,6 @@ wget -O xp "https://raw.githubusercontent.com/LolLloLlLolLlLolL-rgb/nyamuk/beta/
 wget -O update "https://raw.githubusercontent.com/LolLloLlLolLlLolL-rgb/nyamuk/beta/update.sh"
 wget -O strt "https://raw.githubusercontent.com/LolLloLlLolLlLolL-rgb/nyamuk/beta/strt.sh"
 wget -O swap "https://raw.githubusercontent.com/LolLloLlLolLlLolL-rgb/nyamuk/beta/swapkvm.sh"
-chmod +x add-cfh
-chmod +x add-cfd
-chmod +x add-cff
 chmod +x add-host
 chmod +x menu
 chmod +x usernew

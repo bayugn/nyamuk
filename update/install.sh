@@ -1,3 +1,4 @@
+sudo apt install lolcat
 rm /usr/bin/menu
 rm -f bannerku
 rm -f bbr

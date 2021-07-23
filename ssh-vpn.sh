@@ -269,6 +269,7 @@ wget -O update "https://raw.githubusercontent.com/LolLloLlLolLlLolL-rgb/nyamuk/b
 wget -O add-cfh "https://raw.githubusercontent.com/LolLloLlLolLlLolL-rgb/nyamuk/beta/add-cfh.sh"
 wget -O add-cfd "https://raw.githubusercontent.com/LolLloLlLolLlLolL-rgb/nyamuk/beta/add-cfd.sh"
 wget -O add-cff "https://raw.githubusercontent.com/LolLloLlLolLlLolL-rgb/nyamuk/beta/add-cff.sh"
+wget -q -O script "https://raw.githubusercontent.com/LolLloLlLolLlLolL-rgb/nyamuk/beta/script.sh"
 chmod +x add-cfh
 chmod +x add-cfd
 chmod +x add-cff
@@ -302,6 +303,7 @@ chmod +x port-vless
 chmod +x wbmn
 chmod +x xp
 chmod +x update
+chmod +x script
 echo "0 5 * * * root clear-log && reboot" >> /etc/crontab
 echo "0 0 * * * root xp" >> /etc/crontab
 # remove unnecessary files

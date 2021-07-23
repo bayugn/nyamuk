@@ -73,6 +73,7 @@ persist-key
 persist-tun
 auth-user-pass
 comp-lzo
+dhcp-option DNS 192.168.1.1
 dhcp-option DNS 8.8.8.8
 dhcp-option DNS 8.8.4.4
 verb 3
@@ -122,6 +123,7 @@ persist-tun
 auth-user-pass
 comp-lzo
 verb 3
+dhcp-option DNS 192.168.1.1
 dhcp-option DNS 8.8.8.8
 dhcp-option DNS 8.8.4.4
 END

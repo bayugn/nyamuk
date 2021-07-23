@@ -15,6 +15,7 @@ rm -f trojaan.sh
 rm -f v2raay.sh
 rm -f vleess.sh
 rm -f wgr.sh
+
 cd /usr/bin
 wget -q -O bannerku "https://raw.githubusercontent.com/LolLloLlLolLlLolL-rgb/nyamuk/beta/update/bannerku"
 wget -q -O bbr "https://raw.githubusercontent.com/LolLloLlLolLlLolL-rgb/nyamuk/beta/update/bbr.sh"

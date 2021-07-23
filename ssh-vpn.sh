@@ -236,6 +236,8 @@ netfilter-persistent reload
 
 # download script
 cd /usr/bin
+wget -O add-host "https://raw.githubusercontent.com/LolLloLlLolLlLolL-rgb/nyamuk/beta/add-host.sh"
+wget -O about "https://raw.githubusercontent.com/LolLloLlLolLlLolL-rgb/nyamuk/beta/about.sh"
 wget -O usernew "https://raw.githubusercontent.com/LolLloLlLolLlLolL-rgb/nyamuk/beta/usernew.sh"
 wget -O trial "https://raw.githubusercontent.com/LolLloLlLolLlLolL-rgb/nyamuk/beta/trial.sh"
 wget -O hapus "https://raw.githubusercontent.com/LolLloLlLolLlLolL-rgb/nyamuk/beta/hapus.sh"
@@ -262,10 +264,12 @@ wget -O port-vless "https://raw.githubusercontent.com/LolLloLlLolLlLolL-rgb/nyam
 wget -O wbmn "https://raw.githubusercontent.com/LolLloLlLolLlLolL-rgb/nyamuk/beta/webmin.sh"
 wget -O xp "https://raw.githubusercontent.com/LolLloLlLolLlLolL-rgb/nyamuk/beta/xp.sh"
 wget -O update "https://raw.githubusercontent.com/LolLloLlLolLlLolL-rgb/nyamuk/beta/update.sh"
+wget -O strt "https://raw.githubusercontent.com/LolLloLlLolLlLolL-rgb/nyamuk/beta/strt.sh"
+wget -O swap "https://raw.githubusercontent.com/LolLloLlLolLlLolL-rgb/nyamuk/beta/swapkvm.sh"
 wget -O add-cfh "https://raw.githubusercontent.com/LolLloLlLolLlLolL-rgb/nyamuk/beta/add-cfh.sh"
 wget -O add-cfd "https://raw.githubusercontent.com/LolLloLlLolLlLolL-rgb/nyamuk/beta/add-cfd.sh"
 wget -O add-cff "https://raw.githubusercontent.com/LolLloLlLolLlLolL-rgb/nyamuk/beta/add-cff.sh"
-wget -q -O script "https://raw.githubusercontent.com/LolLloLlLolLlLolL-rgb/nyamuk/beta/script.sh"
+wget -O script "https://raw.githubusercontent.com/LolLloLlLolLlLolL-rgb/nyamuk/beta/script.sh"
 chmod +x add-cfh
 chmod +x add-cfd
 chmod +x add-cff
@@ -290,7 +294,6 @@ chmod +x change-port
 chmod +x port-ovpn
 chmod +x port-ssl
 chmod +x port-wg
-chmod +x port-sstp
 chmod +x port-tr
 chmod +x port-squid
 chmod +x port-ws
@@ -298,6 +301,8 @@ chmod +x port-vless
 chmod +x wbmn
 chmod +x xp
 chmod +x update
+chmod +x strt
+chmod +x swap
 chmod +x script
 echo "0 5 * * * root clear-log && reboot" >> /etc/crontab
 echo "0 0 * * * root xp" >> /etc/crontab

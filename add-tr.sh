@@ -37,7 +37,6 @@ exp=`date -d "$masaaktif days" +"%Y-%m-%d"`
 echo -e "### $user $exp" >> /etc/trojan/akun.conf
 systemctl restart trojan
 trojanlink="trojan://${user}@${domain}:${tr}"
-trojan-golink="trojan-go://${user}@${domain}:${tr-go}"
 clear
 echo -e ""
 echo -e "×××××××××××××××××××××××××××××××××"
@@ -49,7 +48,6 @@ echo -e "ᗚ Host/IP      • ${domain}"
 echo -e "ᗚ port         • ${tr}"
 echo -e "ᗚ Key          • ${user}"
 echo -e "ᗚ link         • ${trojanlink}"
-echo -e "ᗚ link         • ${trojan-golink}"
 echo -e "×××××××××××××××××××××××××××××××××"
 echo -e "ᗚ Expired On   • $exp"
 echo -e "×××××××××××××××××××××××××××××××××"

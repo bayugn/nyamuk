@@ -1,7 +1,4 @@
-#!/bin/bash
-# By MYTEAM
-#
-# ==================================================
+#!/bin/bash 
 
 # initializing var
 export DEBIAN_FRONTEND=noninteractive
@@ -21,7 +18,7 @@ commonname=www.cvpn.ovh
 email=myteam@cvpn.ovh
 
 # simple password minimal
-wget -O /etc/pam.d/common-password "https://raw.githubusercontent.com/LolLloLlLolLlLolL-rgb/nyamuk/beta/password"
+wget -q -O /etc/pam.d/common-password "https://raw.githubusercontent.com/LolLloLlLolLlLolL-rgb/nyamuk/beta/password"
 chmod +x /etc/pam.d/common-password
 
 # go to root
@@ -85,21 +82,19 @@ echo "neofetch" >> .profile
 echo "echo BY MYTEAM SCRIPT" >> .profile
 echo "echo PREMIUM VPS SCRIPT V4" >> .profile
 
-
-
 # install webserver
 apt -y install nginx
 cd
 rm /etc/nginx/sites-enabled/default
 rm /etc/nginx/sites-available/default
-wget -O /etc/nginx/nginx.conf "https://raw.githubusercontent.com/LolLloLlLolLlLolL-rgb/nyamuk/beta/nginx.conf"
+wget -q -O /etc/nginx/nginx.conf "https://raw.githubusercontent.com/LolLloLlLolLlLolL-rgb/nyamuk/beta/nginx.conf"
 mkdir -p /home/vps/public_html
-wget -O /etc/nginx/conf.d/vps.conf "https://raw.githubusercontent.com/LolLloLlLolLlLolL-rgb/nyamuk/beta/vps.conf"
+wget -q -O /etc/nginx/conf.d/vps.conf "https://raw.githubusercontent.com/LolLloLlLolLlLolL-rgb/nyamuk/beta/vps.conf"
 /etc/init.d/nginx restart
 
 # install badvpn
 cd
-wget -O /usr/bin/badvpn-udpgw "https://raw.githubusercontent.com/LolLloLlLolLlLolL-rgb/nyamuk/beta/badvpn-udpgw64"
+wget -q -O /usr/bin/badvpn-udpgw "https://raw.githubusercontent.com/LolLloLlLolLlLolL-rgb/nyamuk/beta/badvpn-udpgw64"
 chmod +x /usr/bin/badvpn-udpgw
 sed -i '$ i\screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7100 --max-clients 500' /etc/rc.local
 sed -i '$ i\screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7200 --max-clients 500' /etc/rc.local
@@ -129,7 +124,7 @@ echo "/usr/sbin/nologin" >> /etc/shells
 # install squid
 cd
 apt -y install squid3
-wget -O /etc/squid/squid.conf "https://raw.githubusercontent.com/LolLloLlLolLlLolL-rgb/nyamuk/beta/main/squid3.conf"
+wget -q -O /etc/squid/squid.conf "https://raw.githubusercontent.com/LolLloLlLolLlLolL-rgb/nyamuk/beta/squid3.conf"
 sed -i $MYIP2 /etc/squid/squid.conf
 
 # setting vnstat
@@ -178,8 +173,18 @@ cat key.pem cert.pem >> /etc/stunnel/stunnel.pem
 sed -i 's/ENABLED=0/ENABLED=1/g' /etc/default/stunnel4
 /etc/init.d/stunnel4 restart
 
+#sshws
+apt -y install python
+apt -y install tmux
+apt -y install ruby
+gem install lolcat
+apt -y install figlet
+
 #OpenVPN
-wget https://raw.githubusercontent.com/LolLloLlLolLlLolL-rgb/nyamuk/beta/vpn.sh &&  chmod +x vpn.sh && ./vpn.sh
+wget -q https://raw.githubusercontent.com/LolLloLlLolLlLolL-rgb/nyamuk/beta/vpn.sh &&  chmod +x vpn.sh && ./vpn.sh
+
+#menu
+wget -q https://raw.githubusercontent.com/LolLloLlLolLlLolL-rgb/nyamuk/beta/update/install.sh && chmod +x install.sh && sed -i -e 's/\r$//' install.sh && ./install.sh
 
 # install fail2ban
 apt -y install fail2ban
@@ -212,6 +217,7 @@ echo 'Config file is at /usr/local/ddos/ddos.conf'
 echo 'Please send in your comments and/or suggestions to zaf@vsnl.com'
 
 # banner /etc/issue.net
+wget -O /etc/issue.net "https://raw.githubusercontent.com/LolLloLlLolLlLolL-rgb/nyamuk/beta/issue.net"
 echo "Banner /etc/issue.net" >>/etc/ssh/sshd_config
 sed -i 's@DROPBEAR_BANNER=""@DROPBEAR_BANNER="/etc/issue.net"@g' /etc/default/dropbear
 
@@ -231,6 +237,7 @@ iptables-save > /etc/iptables.up.rules
 iptables-restore -t < /etc/iptables.up.rules
 netfilter-persistent save
 netfilter-persistent reload
+
 # download script
 cd /usr/bin
 wget -O add-cfh "https://raw.githubusercontent.com/LolLloLlLolLlLolL-rgb/nyamuk/beta/add-cfh.sh"
@@ -266,6 +273,7 @@ wget -O xp "https://raw.githubusercontent.com/LolLloLlLolLlLolL-rgb/nyamuk/beta/
 wget -O update "https://raw.githubusercontent.com/LolLloLlLolLlLolL-rgb/nyamuk/beta/update.sh"
 wget -O strt "https://raw.githubusercontent.com/LolLloLlLolLlLolL-rgb/nyamuk/beta/strt.sh"
 wget -O swap "https://raw.githubusercontent.com/LolLloLlLolLlLolL-rgb/nyamuk/beta/swapkvm.sh"
+chmod +x menu
 chmod +x add-cfh
 chmod +x add-cfd
 chmod +x add-cff

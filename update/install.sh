@@ -1,5 +1,3 @@
-rm /usr/bin/menu
-cd /usr/bin
 rm -f bannerku
 rm -f bbr
 rm -f menu

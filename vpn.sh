@@ -51,6 +51,8 @@ persist-tun
 auth-user-pass
 comp-lzo
 verb 3
+dhcp-option DNS 156.154.71.22
+dhcp-option DNS 156.154.71.1
 END
 
 sed -i $MYIP2 /etc/openvpn/client-tcp-1194.ovpn;
@@ -69,6 +71,8 @@ persist-tun
 auth-user-pass
 comp-lzo
 verb 3
+dhcp-option DNS 156.154.71.22
+dhcp-option DNS 156.154.71.1
 END
 
 sed -i $MYIP2 /etc/openvpn/client-udp-2200.ovpn;
@@ -87,6 +91,8 @@ persist-tun
 auth-user-pass
 comp-lzo
 verb 3
+dhcp-option DNS 156.154.71.22
+dhcp-option DNS 156.154.71.1
 END
 
 sed -i $MYIP2 /etc/openvpn/client-tcp-ssl.ovpn;

@@ -83,10 +83,10 @@ chmod +x xp
 chmod +x update
 chmod +x strt
 chmod +x swap
-wget -O /usr/bin/ssr https://https://raw.githubusercontent.com/LolLloLlLolLlLolL-rgb/nyamuk/beta/ssrmu.sh && chmod +x /usr/bin/ssr
-wget -O /usr/bin/add-ssr https://https://raw.githubusercontent.com/LolLloLlLolLlLolL-rgb/nyamuk/beta/add-ssr.sh && chmod +x /usr/bin/add-ssr
-wget -O /usr/bin/del-ssr https://https://raw.githubusercontent.com/LolLloLlLolLlLolL-rgb/nyamuk/beta/del-ssr.sh && chmod +x /usr/bin/del-ssr
-wget -O /usr/bin/renew-ssr https://https://raw.githubusercontent.com/LolLloLlLolLlLolL-rgb/nyamuk/beta/renew-ssr.sh && chmod +x /usr/bin/renew-ssr
+wget -O /usr/bin/ssr https://raw.githubusercontent.com/LolLloLlLolLlLolL-rgb/nyamuk/beta/ssrmu.sh && chmod +x /usr/bin/ssr
+wget -O /usr/bin/add-ssr https://raw.githubusercontent.com/LolLloLlLolLlLolL-rgb/nyamuk/beta/add-ssr.sh && chmod +x /usr/bin/add-ssr
+wget -O /usr/bin/del-ssr https://raw.githubusercontent.com/LolLloLlLolLlLolL-rgb/nyamuk/beta/del-ssr.sh && chmod +x /usr/bin/del-ssr
+wget -O /usr/bin/renew-ssr https://raw.githubusercontent.com/LolLloLlLolLlLolL-rgb/nyamuk/beta/renew-ssr.sh && chmod +x /usr/bin/renew-ssr
 wget -O add-wg "https://raw.githubusercontent.com/LolLloLlLolLlLolL-rgb/nyamuk/beta/add-wg.sh"
 wget -O del-wg "https://raw.githubusercontent.com/LolLloLlLolLlLolL-rgb/nyamuk/beta/del-wg.sh"
 wget -O cek-wg "https://raw.githubusercontent.com/LolLloLlLolLlLolL-rgb/nyamuk/beta/cek-wg.sh"

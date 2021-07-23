@@ -35,8 +35,6 @@ echo -e "\e[1;32m═════════════════════
 echo -e ""
 read -p "     Please Input Number  [1-10 or x] :  "  ssh
 echo -e ""
-read -p "     Please Input Number  [1-10 or x] :  "  ssh
-echo -e ""
 case $ssh in
 1)
 usernew

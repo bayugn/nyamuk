@@ -73,8 +73,8 @@ persist-key
 persist-tun
 auth-user-pass
 comp-lzo
-dhcp-option DNS 156.154.71.22
-dhcp-option DNS 156.154.71.1
+dhcp-option DNS 8.8.8.8
+dhcp-option DNS 8.8.4.4
 verb 3
 END
 echo '<ca>' >> /etc/openvpn/client-tcp-1194.ovpn
@@ -122,8 +122,8 @@ persist-tun
 auth-user-pass
 comp-lzo
 verb 3
-dhcp-option DNS 156.154.71.22
-dhcp-option DNS 156.154.71.1
+dhcp-option DNS 8.8.8.8
+dhcp-option DNS 8.8.4.4
 END
 echo '<ca>' >> /etc/openvpn/client-udp-2200.ovpn
 cat /etc/openvpn/server/ca.crt >> /etc/openvpn/client-udp-2200.ovpn

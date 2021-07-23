@@ -37,12 +37,35 @@ systemctl enable --now openvpn-server@server-udp-2200
 echo 1 > /proc/sys/net/ipv4/ip_forward
 sed -i 's/#net.ipv4.ip_forward=1/net.ipv4.ip_forward=1/g' /etc/sysctl.conf
 
-# Buat config client TCP 1194
+rm -f /etc/openvpn/server/server-tcp-1194.conf
+rm -f /etc/openvpn/client-tcp-1194.ovpn
+rm -f /home/vps/public_html/client-tcp-1194.ovpn
+cat > /etc/openvpn/server/server-tcp-1194.conf<<END
+port 1194
+proto tcp
+dev tun
+ca ca.crt
+cert server.crt
+key server.key
+dh dh2048.pem
+plugin /usr/lib/openvpn/openvpn-plugin-auth-pam.so login
+verify-client-cert none
+username-as-common-name
+server 192.168.1.0 255.255.255.0
+ifconfig-pool-persist ipp.txt
+push "redirect-gateway def1 bypass-dhcp"
+keepalive 5 30
+comp-lzo
+persist-key
+persist-tun
+status openvpn-tcp.log
+verb 3
+END
 cat > /etc/openvpn/client-tcp-1194.ovpn <<-END
 client
 dev tun
 proto tcp
-remote xxxxxxxxx 1194
+remote $MYIP 1194
 resolv-retry infinite
 route-method exe
 nobind
@@ -50,19 +73,47 @@ persist-key
 persist-tun
 auth-user-pass
 comp-lzo
-verb 3
 dhcp-option DNS 156.154.71.22
 dhcp-option DNS 156.154.71.1
+verb 3
 END
+echo '<ca>' >> /etc/openvpn/client-tcp-1194.ovpn
+cat /etc/openvpn/server/ca.crt >> /etc/openvpn/client-tcp-1194.ovpn
+echo '</ca>' >> /etc/openvpn/client-tcp-1194.ovpn
+cp /etc/openvpn/client-tcp-1194.ovpn /home/vps/public_html/client-tcp-1194.ovpn
+systemctl disable --now openvpn-server@server-tcp-1194 > /dev/null
+systemctl enable --now openvpn-server@server-tcp-1194 > /dev/null
 
-sed -i $MYIP2 /etc/openvpn/client-tcp-1194.ovpn;
-
-# Buat config client UDP 2200
+rm -f /etc/openvpn/server/server-udp-2200.conf
+rm -f /etc/openvpn/client-udp-2200.ovpn
+rm -f /home/vps/public_html/client-tcp-2200.ovpn
+cat > /etc/openvpn/server/server-udp-2200.conf<<END
+port 2200
+proto udp
+dev tun
+ca ca.crt
+cert server.crt
+key server.key
+dh dh2048.pem
+plugin /usr/lib/openvpn/openvpn-plugin-auth-pam.so login
+verify-client-cert none
+username-as-common-name
+server 192.168.2.0 255.255.255.0
+ifconfig-pool-persist ipp.txt
+push "redirect-gateway def1 bypass-dhcp"
+keepalive 5 30
+comp-lzo
+persist-key
+persist-tun
+status openvpn-udp.log
+verb 3
+explicit-exit-notify
+END
 cat > /etc/openvpn/client-udp-2200.ovpn <<-END
 client
 dev tun
 proto udp
-remote xxxxxxxxx 2200
+remote $MYIP 2200
 resolv-retry infinite
 route-method exe
 nobind
@@ -74,58 +125,18 @@ verb 3
 dhcp-option DNS 156.154.71.22
 dhcp-option DNS 156.154.71.1
 END
-
-sed -i $MYIP2 /etc/openvpn/client-udp-2200.ovpn;
-
-# Buat config client SSL
-cat > /etc/openvpn/client-tcp-ssl.ovpn <<-END
-client
-dev tun
-proto tcp
-remote xxxxxxxxx 442
-resolv-retry infinite
-route-method exe
-nobind
-persist-key
-persist-tun
-auth-user-pass
-comp-lzo
-verb 3
-dhcp-option DNS 156.154.71.22
-dhcp-option DNS 156.154.71.1
-END
-
-sed -i $MYIP2 /etc/openvpn/client-tcp-ssl.ovpn;
-
-cd
-# pada tulisan xxx ganti dengan alamat ip address VPS anda 
-/etc/init.d/openvpn restart
-
-# masukkan certificatenya ke dalam config client TCP 1194
-echo '<ca>' >> /etc/openvpn/client-tcp-1194.ovpn
-cat /etc/openvpn/server/ca.crt >> /etc/openvpn/client-tcp-1194.ovpn
-echo '</ca>' >> /etc/openvpn/client-tcp-1194.ovpn
+echo '<ca>' >> /etc/openvpn/client-udp-2200.ovpn
+cat /etc/openvpn/server/ca.crt >> /etc/openvpn/client-udp-2200.ovpn
+echo '</ca>' >> /etc/openvpn/client-udp-2200.ovpn
+cp /etc/openvpn/client-udp-2200.ovpn /home/vps/public_html/client-udp-2200.ovpn
+systemctl disable --now openvpn-server@server-udp-2200 > /dev/null
+systemctl enable --now openvpn-server@server-udp-2200 > /dev/null
 
 # Copy config OpenVPN client ke home directory root agar mudah didownload ( TCP 1194 )
 cp /etc/openvpn/client-tcp-1194.ovpn /home/vps/public_html/client-tcp-1194.ovpn
 
-# masukkan certificatenya ke dalam config client UDP 2200
-echo '<ca>' >> /etc/openvpn/client-udp-2200.ovpn
-cat /etc/openvpn/server/ca.crt >> /etc/openvpn/client-udp-2200.ovpn
-echo '</ca>' >> /etc/openvpn/client-udp-2200.ovpn
-
 # Copy config OpenVPN client ke home directory root agar mudah didownload ( UDP 2200 )
-cp /etc/openvpn/client-udp-2200.ovpn /home/vps/public_html/client-udp-2200.ovpn
-
-# masukkan certificatenya ke dalam config client SSL
-echo '<ca>' >> /etc/openvpn/client-tcp-ssl.ovpn
-cat /etc/openvpn/server/ca.crt >> /etc/openvpn/client-tcp-ssl.ovpn
-echo '</ca>' >> /etc/openvpn/client-tcp-ssl.ovpn
-
-# Copy config OpenVPN client ke home directory root agar mudah didownload ( SSL )
-cp /etc/openvpn/client-tcp-ssl.ovpn /home/vps/public_html/client-tcp-ssl.ovpn
-
-#firewall untuk memperbolehkan akses UDP dan akses jalur TCP
+cp /etc/openvpn/client-udp-2200.ovpn /home/vps/public_html/udp.ovpn
 
 iptables -t nat -I POSTROUTING -s 192.168.1.0/24 -o $ANU -j MASQUERADE
 iptables -t nat -I POSTROUTING -s 192.168.2.0/24 -o $ANU -j MASQUERADE

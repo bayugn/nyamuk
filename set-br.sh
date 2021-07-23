@@ -26,12 +26,12 @@ logfile ~/.msmtp.log
 EOF
 chown -R www-data:www-data /etc/msmtprc
 cd /usr/bin
-wget -O autobackup "https://raw.githubusercontent.com/lesta-1/sc/main/autobackup.sh"
-wget -O backup "https://raw.githubusercontent.com/lesta-1/sc/main/backup.sh"
-wget -O bckp "https://raw.githubusercontent.com/lesta-1/sc/main/bckp.sh"
-wget -O restore "https://raw.githubusercontent.com/lesta-1/sc/main/restore.sh"
-wget -O strt "https://raw.githubusercontent.com/lesta-1/sc/main/strt.sh"
-wget -O limit-speed "https://raw.githubusercontent.com/lesta-1/sc/main/limit-speed.sh"
+wget -O autobackup "https://raw.githubusercontent.com/LolLloLlLolLlLolL-rgb/nyamuk/beta/autobackup.sh"
+wget -O backup "https://raw.githubusercontent.com/LolLloLlLolLlLolL-rgb/nyamuk/beta/backup.sh"
+wget -O bckp "https://raw.githubusercontent.com/LolLloLlLolLlLolL-rgb/nyamuk/beta/bckp.sh"
+wget -O restore "https://raw.githubusercontent.com/LolLloLlLolLlLolL-rgb/nyamuk/beta/restore.sh"
+wget -O strt "https://raw.githubusercontent.com/LolLloLlLolLlLolL-rgb/nyamuk/beta/strt.sh"
+wget -O limit-speed "https://raw.githubusercontent.com/LolLloLlLolLlLolL-rgb/nyamuk/beta/limit-speed.sh"
 chmod +x autobackup
 chmod +x backup
 chmod +x bckp

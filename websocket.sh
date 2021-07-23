@@ -1,6 +1,6 @@
 #!/bin/bash
 cleae
-echo Installing Websocket-SSH AUTOSCRIPT BY RPJ
+echo Installing Websocket-SSH AUTOSCRIPT MYTEAM
 sleep 1
 echo Cek Hak Akses...
 sleep 0.5

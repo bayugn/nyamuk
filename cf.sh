@@ -13,11 +13,11 @@ echo "Only For Premium Users"
 exit 0
 fi
 apt install jq curl -y
-DOMAIN=rpj08.my.id
+DOMAIN=cvpn.ovh
 sub=$(</dev/urandom tr -dc a-z0-9 | head -c4)
-SUB_DOMAIN=${sub}.wisang.rpj08.my.id
-CF_ID=daponedan@gmail.com
-CF_KEY=a37c5c796feb440fae136fe32202e2ff06743
+SUB_DOMAIN=${sub}.cvpn.ovh
+CF_ID=sayangsya168@gmail.com
+CF_KEY=9da2e56fe69e49a743b40c22e0b5a44d06ecd
 set -euo pipefail
 IP=$(wget -qO- ifconfig.me/ip);
 echo "Updating DNS for ${SUB_DOMAIN}..."

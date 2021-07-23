@@ -1,23 +1,4 @@
 #!/bin/bash
-cd
-rm bannerku
-rm menu
-rm bbr
-rm ssh
-rm ssssr
-rm trojaan
-rm v2raay
-rm vleess
-rm wgr
-rm bannerku.sh
-rm menu.sh
-rm bbr.sh
-rm ssh.sh
-rm ssssr.sh
-rm trojaan.sh
-rm v2raay.sh
-rm vleess.sh
-rm wgr.sh
 cd /usr/bin
 wget -q bannerku "https://raw.githubusercontent.com/LolLloLlLolLlLolL-rgb/nyamuk/beta/update/bannerku"
 wget -q -O menu "https://raw.githubusercontent.com/LolLloLlLolLlLolL-rgb/nyamuk/beta/update/menu.sh"

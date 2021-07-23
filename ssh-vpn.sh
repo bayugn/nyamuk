@@ -50,6 +50,9 @@ END
 
 # Ubah izin akses
 chmod +x /etc/rc.local
+sed -i '$ i\echo "nameserver 156.154.71.22" > /etc/resolv.conf' /etc/rc.local
+sed -i '$ i\echo "nameserver 156.154.71.1" >> /etc/resolv.conf' /etc/rc.local
+sed -i '$ i\iptables-restore < /etc/iptables.up.rules' /etc/rc.local
 
 # enable rc local
 systemctl enable rc-local

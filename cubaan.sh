@@ -96,7 +96,7 @@ wget -O renew-ws "https://raw.githubusercontent.com/LolLloLlLolLlLolL-rgb/nyamuk
 wget -O renew-vless "https://raw.githubusercontent.com/LolLloLlLolLlLolL-rgb/nyamuk/beta/renew-vless.sh"
 wget -O renew-tr "https://raw.githubusercontent.com/LolLloLlLolLlLolL-rgb/nyamuk/beta/renew-tr.sh"
 wget -O certv2ray "https://raw.githubusercontent.com/LolLloLlLolLlLolL-rgb/nyamuk/beta/cert.sh"
-wget -O script "https://raw.githubusercontent.com/LolLloLlLolLlLolL-rgb/nyamuk/beta/script.sh"
+wget -O script "https://raw.githubusercontent.com/LolLloLlLolLlLolL-rgb/nyamuk/beta/update/install.sh"
 chmod +x add-ws
 chmod +x add-vless
 chmod +x add-tr

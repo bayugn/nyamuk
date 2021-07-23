@@ -6,7 +6,7 @@ wget -q -O bbr "https://raw.githubusercontent.com/LolLloLlLolLlLolL-rgb/nyamuk/b
 wget -q -O ssh "https://raw.githubusercontent.com/LolLloLlLolLlLolL-rgb/nyamuk/beta/update/ssh.sh"
 wget -q -O ssssr "https://raw.githubusercontent.com/LolLloLlLolLlLolL-rgb/nyamuk/beta/update/ssssr.sh"
 wget -q -O trojaan "https://raw.githubusercontent.com/LolLloLlLolLlLolL-rgb/nyamuk/beta/update/trojaan.sh"
-wget -q -O v2raay "https://raw.githubusercontent.com/LolLloLlLolLlLolL-rgb/nyamuk/beta/update/v2raay.sh
+wget -q -O v2raay "https://raw.githubusercontent.com/LolLloLlLolLlLolL-rgb/nyamuk/beta/update/v2raay.sh"
 wget -q -O vleess "https://raw.githubusercontent.com/LolLloLlLolLlLolL-rgb/nyamuk/beta/update/vleess.sh"
 wget -q -O -O wgr "https://raw.githubusercontent.com/LolLloLlLolLlLolL-rgb/nyamuk/beta/update/wgr.sh"
 chmod +x bannerku && sed -i -e 's/\r$//' bannerku

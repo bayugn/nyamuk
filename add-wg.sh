@@ -41,9 +41,9 @@ fi
 	WG_CONFIG="/etc/wireguard/wg0.conf"
 	LASTIP=$( grep "/32" $WG_CONFIG | tail -n1 | awk '{print $3}' | cut -d "/" -f 1 | cut -d "." -f 4 )
 	if [[ "$LASTIP" = "" ]]; then
-	CLIENT_ADDRESS="10.66.66.2"
+	CLIENT_ADDRESS="172.16.7.2"
 	else
-	CLIENT_ADDRESS="10.66.66.$((LASTIP+1))"
+	CLIENT_ADDRESS="172.16.7.$((LASTIP+1))"
 	fi
 
 	# Adguard DNS by default

@@ -6,6 +6,7 @@ rm -f menu
 rm -f ssh
 rm -f ssssr
 rm -f trojaan
+rm -f v2raay
 rm -f vleess
 rm -f wgr
 rm -f bbr.sh
@@ -13,6 +14,7 @@ rm -f menu.sh
 rm -f ssh.sh
 rm -f ssssr.sh
 rm -f trojaan.sh
+rm -f v2raay.sh
 rm -f vleess.sh
 rm -f wgr.sh
 cd
@@ -23,6 +25,7 @@ wget -q -O menu "https://raw.githubusercontent.com/LolLloLlLolLlLolL-rgb/nyamuk/
 wget -q -O ssh "https://raw.githubusercontent.com/LolLloLlLolLlLolL-rgb/nyamuk/beta/update/ssh.sh"
 wget -q -O ssssr "https://raw.githubusercontent.com/LolLloLlLolLlLolL-rgb/nyamuk/beta/update/ssssr.sh"
 wget -q -O trojaan "https://raw.githubusercontent.com/LolLloLlLolLlLolL-rgb/nyamuk/beta/update/trojaan.sh"
+wget -q -O v2raay "https://raw.githubusercontent.com/LolLloLlLolLlLolL-rgb/nyamuk/beta/update/v2raay.sh
 wget -q -O vleess "https://raw.githubusercontent.com/LolLloLlLolLlLolL-rgb/nyamuk/beta/update/vleess.sh"
 wget -q -O wgr "https://raw.githubusercontent.com/LolLloLlLolLlLolL-rgb/nyamuk/beta/update/wgr.sh"
 chmod +x bannerku && sed -i -e 's/\r$//' bannerku
@@ -31,5 +34,6 @@ chmod +x menu &&  sed -i -e 's/\r$//' menu
 chmod +x ssh && sed -i -e 's/\r$//' ssh 
 chmod +x ssssr && sed -i -e 's/\r$//' ssssr 
 chmod +x trojaan && sed -i -e 's/\r$//' trojaan
+chmod +x v2raay && sed -i -e 's/\r$//' v2raay
 chmod +x vleess && sed -i -e 's/\r$//' vleess 
 chmod +x wgr && sed -i -e 's/\r$//' wgr 

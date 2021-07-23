@@ -53,7 +53,7 @@ verify-client-cert none
 username-as-common-name
 server 192.168.1.0 255.255.255.0
 ifconfig-pool-persist ipp.txt
-push "redirect-gateway def1 bypass-dhcp"
+push "redirect-gateway def1"
 keepalive 5 30
 comp-lzo
 persist-key
@@ -101,7 +101,7 @@ verify-client-cert none
 username-as-common-name
 server 192.168.2.0 255.255.255.0
 ifconfig-pool-persist ipp.txt
-push "redirect-gateway def1 bypass-dhcp"
+push "redirect-gateway def1"
 keepalive 5 30
 comp-lzo
 persist-key

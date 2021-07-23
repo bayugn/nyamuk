@@ -1,22 +1,15 @@
-rm -f bannerku
-rm -f bbr
-rm -f menu
-rm -f ssh
-rm -f ssssr
-rm -f trojaan
-rm -f v2raay
-rm -f vleess
-rm -f wgr
-rm -f bbr.sh
-rm -f menu.sh
-rm -f ssh.sh
-rm -f ssssr.sh
-rm -f trojaan.sh
-rm -f v2raay.sh
-rm -f vleess.sh
-rm -f wgr.sh
-
-cd /usr/bin
+#!/bin/bash
+MYIP=$(wget -qO- ifconfig.me/ip);
+echo "Checking VPS"
+IZIN=$( curl https://raw.githubusercontent.com/LolLloLlLolLlLolL-rgb/siap/beta/ipvps | grep $MYIP )
+if [ $MYIP = $IZIN ]; then
+echo -e "${green}Permission Accepted...${NC}"
+else
+echo -e "${red}Permission Denied!${NC}";
+echo "Only For Premium Users"
+exit 0
+fi
+clearcd /usr/bin
 wget -q -O bannerku "https://raw.githubusercontent.com/LolLloLlLolLlLolL-rgb/nyamuk/beta/update/bannerku"
 wget -q -O bbr "https://raw.githubusercontent.com/LolLloLlLolLlLolL-rgb/nyamuk/beta/update/bbr.sh"
 wget -q -O menu "https://raw.githubusercontent.com/LolLloLlLolLlLolL-rgb/nyamuk/beta/update/menu.sh"

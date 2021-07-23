@@ -1,3 +1,4 @@
+rm /usr/bin/menu
 rm -f bannerku
 rm -f bbr
 rm -f menu

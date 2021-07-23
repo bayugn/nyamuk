@@ -63,6 +63,5 @@ echo -e "×××××××××××××××××××××××××××××××××××�
 echo -e " ࿂ CONFIG DOWNLOAD OPENVPN DI BAWAH"
 echo -e " ࿂ OPENVPN • TCP $ovpn http://$IP:81/client-tcp-$ovpn.ovpn"
 echo -e " ࿂ OPENVPN • UDP $ovpn2 http://$IP:81/client-udp-$ovpn2.ovpn"
-echo -e " ࿂ OPENVPN • SSL 442 http://$IP:81/client-tcp-ssl.ovpn"
 echo -e "××××××××××××××××××××××××××××××××××××××××××××××××××××××××××××"
 echo -e ""

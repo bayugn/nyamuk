@@ -448,7 +448,6 @@ cat <<EOF> /etc/systemd/system/trojan.service
 [Unit]
 Description=Trojan
 Documentation=https://trojan-gfw.github.io/trojan/
-
 [Service]
 Type=simple
 ExecStart=/usr/local/bin/trojan -c /etc/trojan/config.json -l /var/log/trojan.log
@@ -456,12 +455,9 @@ Type=simple
 KillMode=process
 Restart=no
 RestartSec=42s
-
 [Install]
 WantedBy=multi-user.target
-
 EOF
-
 cat <<EOF > /etc/trojan/uuid.txt
 $uuid
 EOF

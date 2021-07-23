@@ -46,7 +46,6 @@ match_del=$(python mujson_mgr.py -d -u "${user}"|grep -w "delete user")
 cd
 fi
 done
-/etc/init.d/ssrmu restart
 data=( `cat /etc/trojan/akun.conf | grep '^###' | cut -d ' ' -f 2`);
 now=`date +"%Y-%m-%d"`
 for user in "${data[@]}"

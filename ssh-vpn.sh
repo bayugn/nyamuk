@@ -1,16 +1,17 @@
 #!/bin/bash
-# By MyTeam
+# By MYTEAM
+#
 # ==================================================
 
 # initializing var
 export DEBIAN_FRONTEND=noninteractive
-MYIP=$(wget -qO- ifconfig.me/ip);
+MYIP=$(wget -qO- icanhazip.com);
 MYIP2="s/xxxxxxxxx/$MYIP/g";
 NET=$(ip -o $ANU -4 route show to default | awk '{print $5}');
 source /etc/os-release
 ver=$VERSION_ID
 
-#detail nama perusahaan
+#detail nama syarikat
 country=ID
 state=Malaysia
 locality=Malaysia
@@ -41,7 +42,6 @@ SysVStartPriority=99
 [Install]
 WantedBy=multi-user.target
 END
-clear
 
 # nano /etc/rc.local
 cat > /etc/rc.local <<-END
@@ -72,7 +72,7 @@ apt-get remove --purge exim4 -y
 # install wget and curl
 apt -y install wget curl
 
-# set time UTC +8
+# set time UMT +8
 ln -fs /usr/share/zoneinfo/Asia/Kuala_Lumpur /etc/localtime
 
 # set locale
@@ -82,7 +82,10 @@ sed -i 's/AcceptEnv/#AcceptEnv/g' /etc/ssh/sshd_config
 apt-get --reinstall --fix-missing install -y bzip2 gzip coreutils wget screen rsyslog iftop htop net-tools zip unzip wget net-tools curl nano sed screen gnupg gnupg1 bc apt-transport-https build-essential dirmngr libxml-parser-perl neofetch git lsof
 echo "clear" >> .profile
 echo "neofetch" >> .profile
-echo "echo by MYTEAM SCRIPT" >> .profile
+echo "echo BY MYTEAM SCRIPT" >> .profile
+echo "echo PREMIUM VPS SCRIPT V4" >> .profile
+
+
 
 # install webserver
 apt -y install nginx
@@ -101,7 +104,6 @@ chmod +x /usr/bin/badvpn-udpgw
 sed -i '$ i\screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7100 --max-clients 500' /etc/rc.local
 sed -i '$ i\screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7200 --max-clients 500' /etc/rc.local
 sed -i '$ i\screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7300 --max-clients 500' /etc/rc.local
-sed -i '$ i\screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7900 --max-clients 500' /etc/bin/wstunnel
 screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7100 --max-clients 500
 screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7200 --max-clients 500
 screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7300 --max-clients 500
@@ -127,7 +129,7 @@ echo "/usr/sbin/nologin" >> /etc/shells
 # install squid
 cd
 apt -y install squid3
-wget -O /etc/squid/squid.conf "https://raw.githubusercontent.com/LolLloLlLolLlLolL-rgb/nyamuk/beta/squid3.conf"
+wget -O /etc/squid/squid.conf "https://raw.githubusercontent.com/LolLloLlLolLlLolL-rgb/nyamuk/beta/main/squid3.conf"
 sed -i $MYIP2 /etc/squid/squid.conf
 
 # setting vnstat
@@ -155,19 +157,15 @@ client = no
 socket = a:SO_REUSEADDR=1
 socket = l:TCP_NODELAY=1
 socket = r:TCP_NODELAY=1
-
 [dropbear]
 accept = 444
 connect = 127.0.0.1:109
-
 [dropbear]
 accept = 777
 connect = 127.0.0.1:22
-
 [openvpn]
 accept = 442
 connect = 127.0.0.1:1194
-
 END
 
 # make a certificate
@@ -233,9 +231,11 @@ iptables-save > /etc/iptables.up.rules
 iptables-restore -t < /etc/iptables.up.rules
 netfilter-persistent save
 netfilter-persistent reload
-
 # download script
 cd /usr/bin
+wget -O add-cfh "https://raw.githubusercontent.com/LolLloLlLolLlLolL-rgb/nyamuk/beta/add-cfh.sh"
+wget -O add-cfd "https://raw.githubusercontent.com/LolLloLlLolLlLolL-rgb/nyamuk/beta/add-cfd.sh"
+wget -O add-cff "https://raw.githubusercontent.com/LolLloLlLolLlLolL-rgb/nyamuk/beta/add-cff.sh"
 wget -O add-host "https://raw.githubusercontent.com/LolLloLlLolLlLolL-rgb/nyamuk/beta/add-host.sh"
 wget -O about "https://raw.githubusercontent.com/LolLloLlLolLlLolL-rgb/nyamuk/beta/about.sh"
 wget -O usernew "https://raw.githubusercontent.com/LolLloLlLolLlLolL-rgb/nyamuk/beta/usernew.sh"
@@ -266,10 +266,6 @@ wget -O xp "https://raw.githubusercontent.com/LolLloLlLolLlLolL-rgb/nyamuk/beta/
 wget -O update "https://raw.githubusercontent.com/LolLloLlLolLlLolL-rgb/nyamuk/beta/update.sh"
 wget -O strt "https://raw.githubusercontent.com/LolLloLlLolLlLolL-rgb/nyamuk/beta/strt.sh"
 wget -O swap "https://raw.githubusercontent.com/LolLloLlLolLlLolL-rgb/nyamuk/beta/swapkvm.sh"
-wget -O add-cfh "https://raw.githubusercontent.com/LolLloLlLolLlLolL-rgb/nyamuk/beta/add-cfh.sh"
-wget -O add-cfd "https://raw.githubusercontent.com/LolLloLlLolLlLolL-rgb/nyamuk/beta/add-cfd.sh"
-wget -O add-cff "https://raw.githubusercontent.com/LolLloLlLolLlLolL-rgb/nyamuk/beta/add-cff.sh"
-wget -O script "https://raw.githubusercontent.com/LolLloLlLolLlLolL-rgb/nyamuk/beta/script.sh"
 chmod +x add-cfh
 chmod +x add-cfd
 chmod +x add-cff
@@ -303,7 +299,6 @@ chmod +x xp
 chmod +x update
 chmod +x strt
 chmod +x swap
-chmod +x script
 echo "0 5 * * * root clear-log && reboot" >> /etc/crontab
 echo "0 0 * * * root xp" >> /etc/crontab
 # remove unnecessary files

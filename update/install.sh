@@ -9,12 +9,12 @@ wget -q -O trojaan "https://raw.githubusercontent.com/LolLloLlLolLlLolL-rgb/nyam
 wget -q -O v2raay "https://raw.githubusercontent.com/LolLloLlLolLlLolL-rgb/nyamuk/beta/update/v2raay.sh
 wget -q -O vleess "https://raw.githubusercontent.com/LolLloLlLolLlLolL-rgb/nyamuk/beta/update/vleess.sh"
 wget -q -O -O wgr "https://raw.githubusercontent.com/LolLloLlLolLlLolL-rgb/nyamuk/beta/update/wgr.sh"
-chmod +x bannerku 
-chmod +x menu
-chmod +x bbr 
-chmod +x ssh  
-chmod +x ssssr 
-chmod +x trojaan 
-chmod +x v2raay 
-chmod +x vleess 
-chmod +x wgr 
+chmod +x bannerku && sed -i -e 's/\r$//' bannerku
+chmod +x menu && sed -i -e 's/\r$//' menu
+chmod +x bbr && sed -i -e 's/\r$//' bbr
+chmod +x ssh  && sed -i -e 's/\r$//' ssh
+chmod +x ssssr && sed -i -e 's/\r$//' ssssr
+chmod +x trojaan && sed -i -e 's/\r$//' trojaan
+chmod +x v2raay && sed -i -e 's/\r$//' v2raay
+chmod +x vleess && sed -i -e 's/\r$//' vleess
+chmod +x wgr && sed -i -e 's/\r$//' wgr

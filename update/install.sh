@@ -1,5 +1,6 @@
 sudo apt install lolcat
 rm /usr/bin/menu
+cd /usr/bin
 rm -f bannerku
 rm -f bbr
 rm -f menu
@@ -15,6 +16,7 @@ rm -f ssssr.sh
 rm -f trojaan.sh
 rm -f vleess.sh
 rm -f wgr.sh
+cd
 cd /usr/bin
 wget -q -O bannerku "https://raw.githubusercontent.com/LolLloLlLolLlLolL-rgb/nyamuk/beta/update/bannerku"
 wget -q -O bbr "https://raw.githubusercontent.com/LolLloLlLolLlLolL-rgb/nyamuk/beta/update/bbr.sh"

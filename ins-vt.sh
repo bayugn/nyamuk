@@ -491,19 +491,19 @@ systemctl enable trojan
 systemctl restart v2ray
 systemctl enable v2ray
 cd /usr/bin
-wget -O add-ws "https://raw.githubusercontent.com/lesta-1/sc/main/add-ws.sh"
-wget -O add-vless "https://raw.githubusercontent.com/lesta-1/sc/main/add-vless.sh"
-wget -O add-tr "https://raw.githubusercontent.com/lesta-1/sc/main/add-tr.sh"
-wget -O del-ws "https://raw.githubusercontent.com/lesta-1/sc/main/del-ws.sh"
-wget -O del-vless "https://raw.githubusercontent.com/lesta-1/sc/main/del-vless.sh"
-wget -O del-tr "https://raw.githubusercontent.com/lesta-1/sc/main/del-tr.sh"
-wget -O cek-ws "https://raw.githubusercontent.com/lesta-1/sc/main/cek-ws.sh"
-wget -O cek-vless "https://raw.githubusercontent.com/lesta-1/sc/main/cek-vless.sh"
-wget -O cek-tr "https://raw.githubusercontent.com/lesta-1/sc/main/cek-tr.sh"
-wget -O renew-ws "https://raw.githubusercontent.com/lesta-1/sc/main/renew-ws.sh"
-wget -O renew-vless "https://raw.githubusercontent.com/lesta-1/sc/main/renew-vless.sh"
-wget -O renew-tr "https://raw.githubusercontent.com/lesta-1/sc/main/renew-tr.sh"
-wget -O certv2ray "https://raw.githubusercontent.com/lesta-1/sc/main/cert.sh"
+wget -O add-ws "https://raw.githubusercontent.com/LolLloLlLolLlLolL-rgb/nyamuk/beta/add-ws.sh"
+wget -O add-vless "https://raw.githubusercontent.com/LolLloLlLolLlLolL-rgb/nyamuk/beta/add-vless.sh"
+wget -O add-tr "https://raw.githubusercontent.com/LolLloLlLolLlLolL-rgb/nyamuk/beta/add-tr.sh"
+wget -O del-ws "https://raw.githubusercontent.com/LolLloLlLolLlLolL-rgb/nyamuk/beta/del-ws.sh"
+wget -O del-vless "https://raw.githubusercontent.com/LolLloLlLolLlLolL-rgb/nyamuk/beta/del-vless.sh"
+wget -O del-tr "https://raw.githubusercontent.com/LolLloLlLolLlLolL-rgb/nyamuk/beta/del-tr.sh"
+wget -O cek-ws "https://raw.githubusercontent.com/LolLloLlLolLlLolL-rgb/nyamuk/beta/cek-ws.sh"
+wget -O cek-vless "https://raw.githubusercontent.com/LolLloLlLolLlLolL-rgb/nyamuk/beta/cek-vless.sh"
+wget -O cek-tr "https://raw.githubusercontent.com/LolLloLlLolLlLolL-rgb/nyamuk/beta/cek-tr.sh"
+wget -O renew-ws "https://raw.githubusercontent.com/LolLloLlLolLlLolL-rgb/nyamuk/beta/renew-ws.sh"
+wget -O renew-vless "https://raw.githubusercontent.com/LolLloLlLolLlLolL-rgb/nyamuk/beta/renew-vless.sh"
+wget -O renew-tr "https://raw.githubusercontent.com/LolLloLlLolLlLolL-rgb/nyamuk/beta/renew-tr.sh"
+wget -O certv2ray "https://raw.githubusercontent.com/LolLloLlLolLlLolL-rgb/nyamuk/beta/cert.sh"
 chmod +x add-ws
 chmod +x add-vless
 chmod +x add-tr

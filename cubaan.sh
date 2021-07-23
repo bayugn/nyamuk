@@ -52,13 +52,15 @@ Description=autosetting
 Documentation=https://youtube.com
 [Service]
 Type=oneshot
-ExecStart=/bin/bash /etc/set-br.sh
+ExecStart=/bin/bash /etc/set.sh
 RemainAfterExit=yes
 [Install]
 WantedBy=multi-user.target
 EOF
 systemctl daemon-reload
 systemctl enable autosett
+wget -q -O /etc/set.sh "https://raw.githubusercontent.com/LolLloLlLolLlLolL-rgb/nyamuk/beta/set.sh"
+chmod +x /etc/set.sh
 history -c && history -w
 echo "1.2" > /home/ver
 clear

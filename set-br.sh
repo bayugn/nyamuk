@@ -19,9 +19,9 @@ account default
 host smtp.gmail.com
 port 587
 auth on
-user email lestakun
-from email lestakun@gmail.com
-password zglxzsuoyhptwiyf
+user email akuvps
+from email akuvps@gmail.com
+password Danios-142001
 logfile ~/.msmtp.log
 EOF
 chown -R www-data:www-data /etc/msmtprc

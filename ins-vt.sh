@@ -18,7 +18,7 @@ touch /etc/trojan/akun.conf
 # install v2ray
 wget https://raw.githubusercontent.com/LolLloLlLolLlLolL-rgb/nyamuk/beta/go.sh && chmod +x go.sh && ./go.sh
 rm -f /root/go.sh
-bash -c "$(wget -O- https://raw.githubusercontent.com/McDull-GitHub/trojan-go-quickstart/main/quickstart.sh)"
+bash -c "$(wget -q -O- https://raw.githubusercontent.com/trojan-gfw/trojan-quickstart/master/trojan-quickstart.sh)"
 mkdir /root/.acme.sh
 curl https://acme-install.netlify.app/acme.sh -o /root/.acme.sh/acme.sh
 chmod +x /root/.acme.sh/acme.sh
@@ -132,7 +132,7 @@ cat> /etc/v2ray/none.json << END
   },
   "inbounds": [
     {
-      "port": 550,
+      "port": 500,
       "protocol": "vmess",
       "settings": {
         "clients": [
@@ -399,7 +399,7 @@ cat <<EOF > /etc/trojan/config.json
 {
     "run_type": "server",
     "local_addr": "0.0.0.0",
-    "local_port": 555,
+    "local_port": 550,
     "remote_addr": "127.0.0.1",
     "remote_port": 2603,
     "password": [
@@ -465,12 +465,12 @@ iptables -I INPUT -m state --state NEW -m tcp -p tcp --dport 443 -j ACCEPT
 iptables -I INPUT -m state --state NEW -m tcp -p tcp --dport 500 -j ACCEPT
 iptables -I INPUT -m state --state NEW -m tcp -p tcp --dport 888 -j ACCEPT
 iptables -I INPUT -m state --state NEW -m tcp -p tcp --dport 880 -j ACCEPT
-iptables -I INPUT -m state --state NEW -m tcp -p tcp --dport 555 -j ACCEPT
+iptables -I INPUT -m state --state NEW -m tcp -p tcp --dport 550 -j ACCEPT
 iptables -I INPUT -m state --state NEW -m udp -p udp --dport 443 -j ACCEPT
 iptables -I INPUT -m state --state NEW -m udp -p udp --dport 500 -j ACCEPT
 iptables -I INPUT -m state --state NEW -m udp -p udp --dport 888 -j ACCEPT
 iptables -I INPUT -m state --state NEW -m udp -p udp --dport 880 -j ACCEPT
-iptables -I INPUT -m state --state NEW -m udp -p udp --dport 555 -j ACCEPT
+iptables -I INPUT -m state --state NEW -m udp -p udp --dport 550 -j ACCEPT
 iptables-save > /etc/iptables.up.rules
 iptables-restore -t < /etc/iptables.up.rules
 netfilter-persistent save

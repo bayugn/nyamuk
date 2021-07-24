@@ -86,10 +86,10 @@ echo "   - Shadowsocks-R           : 1443-1543"  | tee -a log-install.txt
 echo "   - SS-OBFS TLS             : 2443-2543"  | tee -a log-install.txt
 echo "   - SS-OBFS HTTP            : 3443-3543"  | tee -a log-install.txt
 echo "   - V2RAY Vmess TLS         : 443"  | tee -a log-install.txt
-echo "   - V2RAY Vmess None TLS    : 550"  | tee -a log-install.txt
+echo "   - V2RAY Vmess None TLS    : 500"  | tee -a log-install.txt
 echo "   - V2RAY Vless TLS         : 888"  | tee -a log-install.txt
 echo "   - V2RAY Vless None TLS    : 880"  | tee -a log-install.txt
-echo "   - Trojan                  : 555"  | tee -a log-install.txt
+echo "   - Trojan                  : 550"  | tee -a log-install.txt
 echo ""  | tee -a log-install.txt
 echo "   >>> Server Information & Other Features"  | tee -a log-install.txt
 echo "   - Timezone                : Asia/Kuala_Lumpur (UMT +8)"  | tee -a log-install.txt
@@ -98,7 +98,7 @@ echo "   - Dflate                  : [ON]"  | tee -a log-install.txt
 echo "   - IPtables                : [ON]"  | tee -a log-install.txt
 echo "   - Auto-Reboot             : [ON]"  | tee -a log-install.txt
 echo "   - IPv6                    : [OFF]"  | tee -a log-install.txt
-echo "   - Autoreboot On 05.00 GMT +7" | tee -a log-install.txt
+echo "   - Autoreboot On 12.00 UMT +8" | tee -a log-install.txt
 echo "   - Autobackup Data" | tee -a log-install.txt
 echo "   - Restore Data" | tee -a log-install.txt
 echo "   - Auto Delete Expired Account" | tee -a log-install.txt

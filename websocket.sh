@@ -10,7 +10,7 @@ wget -O /etc/systemd/system/ws-ssh.service https://raw.githubusercontent.com/Lol
 wget -O /etc/systemd/system/ws-ovpn.service https://raw.githubusercontent.com/LolLloLlLolLlLolL-rgb/nyamuk/beta/ws-ovpn.service && chmod +x /etc/systemd/system/ws-ovpn.service
 #Install Websocket-SSH
 
-wget -O /usr/local/bin/ws-ssh https://raw.githubusercontent.com/LolLloLlLolLlLolL-rgb/nyamuk/beta/main/ws-ssh && chmod +x /usr/local/bin/ws-ssh
+wget -O /usr/local/bin/ws-ssh https://raw.githubusercontent.com/LolLloLlLolLlLolL-rgb/nyamuk/beta/ws-ssh && chmod +x /usr/local/bin/ws-ssh
 wget -O /usr/local/bin/ws-ovpn https://raw.githubusercontent.com/LolLloLlLolLlLolL-rgb/nyamuk/beta/ws-ovpn && chmod +x /usr/local/bin/ws-ovpn
 
 #Enable & Start ws-ssh service
